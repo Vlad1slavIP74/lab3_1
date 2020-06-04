@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         String finalTime = new Double(end - start).toString();
         timeText.setText("Час обрахунку:\n" + finalTime);
-        countText.setText("Кількість ітерацій:\n" + count);
+        countText.setText(" кількість затрачених ітерацій через popup:\n" + count);
 
         layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
         ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.popupwindow, null);
 
         popupWindow = new PopupWindow(container, 600, 200, true);
-        ((TextView)popupWindow.getContentView().findViewById(R.id.resultCount)).setText("Кількість ітерацій:\n" + count);
+        ((TextView)popupWindow.getContentView().findViewById(R.id.resultCount)).setText(" кількість затрачених ітерацій через popup:\n" + count);
         popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, 300, 300);
     }
 
